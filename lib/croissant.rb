@@ -1,0 +1,2 @@
+module Croissant
+end
