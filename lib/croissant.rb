@@ -39,6 +39,7 @@ Mime::Type.register "text/ascii", :ascii, [], %w( html )
 
 ActionController::Renderers.add :ascii do |filename, options|
   options[:formats] = :html
+  self.content_type = 'text/html'
   ascii = ::Croissant::Engine.new(render_to_string(options)).render
-  render text: ascii, content_type: content_type
+  ascii
 end
