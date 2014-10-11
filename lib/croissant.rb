@@ -35,11 +35,10 @@ module Croissant
   end
 end
 
-Mime::Type.register "text/ascii", :ascii, [], %w( html )
+Mime::Type.register "text/ascii", :ascii
 
 ActionController::Renderers.add :ascii do |filename, options|
   options[:formats] = :html
   self.content_type = 'text/html'
-  ascii = ::Croissant::Engine.new(render_to_string(options)).render
-  ascii
+  ::Croissant::Engine.new(render_to_string(options)).render
 end
