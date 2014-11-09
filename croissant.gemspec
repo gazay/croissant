@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["alex.gaziev@gmail.com"]
   s.homepage    = "http://github.com/gazay/croissant"
   s.summary     = "ascii renderer"
-  s.description = "later"
+  s.description = "Small ascii renderer for rails"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
