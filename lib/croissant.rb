@@ -19,7 +19,7 @@ module Croissant
     def format_ascii(img_path)
       ascii = "<!DOCTYPE html><html><head></head><body class='ascii-page' style='font-size: 5px'>"
       ascii << AsciiArt.new(img_path).
-        to_ascii_art(format: 'html', width: 400, color: true)
+        to_ascii_art(format: 'html', width: 350, color: true)
       ascii << "</body></html>"
 
       ascii
